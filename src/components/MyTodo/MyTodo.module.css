@@ -1,0 +1,74 @@
+
+.item{
+    position: relative;
+    min-height: 72px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    list-style: none;
+    color: #000000;
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    align-items: center;
+    display: flex;
+    padding-left: 24px;
+}
+.onButton, .offButton{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 66px;
+    height: 33px;
+    outline: none;
+    background: rgba(0, 179, 219, 0.12);
+    border-radius: 20px;  
+}
+.onButton::before, .offButton::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    top: 1px;
+    left: 50%;
+    background: #00B3DB;
+    transition: .5s;
+    transform: scale(1.1);
+}
+.offButton{
+    background: #ECECEC;
+}
+.offButton::before{
+    top: 1px;
+    left: 0;
+}
+.checkbox{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 66px;
+    height: 33px;
+    -webkit-appearance:none ;
+
+}
+.myTodoComplited{
+    display: flex;
+}
+.myTodoComplitedItem{
+    margin-right: 5px;
+}
+.myTodoList{
+    padding-left: 0;
+}
+@media (max-width: 1200px) {
+    .myTodoComplited{
+        display: none;
+    
+    }
+}

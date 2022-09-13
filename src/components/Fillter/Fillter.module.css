@@ -1,0 +1,21 @@
+.myTodoTitle{
+    margin: 0;
+    margin-bottom: 32px;
+}
+.myTodoFillter{
+width: 310px;
+height: 41px;
+background: #FFFFFF;
+border-radius: 5px;
+border: none;
+padding-left: 27px;
+}
+
+@media (min-width: 1200px) {
+    .myTodoFillter {
+        position: absolute;
+        top: 32px;
+        right: 33px;
+        width: 161px;
+        height: 41px;
+    }}

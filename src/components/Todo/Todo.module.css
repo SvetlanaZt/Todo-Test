@@ -1,0 +1,44 @@
+.headerTodo{
+    background-color: #00B3DB;
+    padding-bottom: 56px;
+    margin-bottom: 35px;
+}
+.titleTodo{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 35px;
+color: #000000;
+margin-bottom: 30px;
+padding-left: 21px;
+}
+.sectionTodo{
+    padding: 0 16px;
+}
+.sectionMyTodo{
+    background-color: #EDEDED;
+    padding-top: 38px;
+    padding-left: 18px;
+    padding-right: 18px;
+    
+}
+@media (min-width: 1200px) {
+    .sectionTodo {
+      display: flex;
+    }
+    .sectionTodo{
+        margin-right: 20px;
+        padding: 0 123px;
+    }
+    .sectionMyTodo{
+        position: relative;
+    }
+    .headerTodo{
+        margin-bottom: 52px;
+    }
+    .titleTodo{
+        margin-bottom: 60px;
+        padding-left: 123px;
+    }
+  }
