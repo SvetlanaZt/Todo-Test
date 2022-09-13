@@ -50,6 +50,7 @@ export default function Todo() {
     <div className={css.sectionTodo}>
     <section className={css.sectionTo}>
 
+
     <AddTodo onClick={takeName}/> 
     </section>
     <section className={css.sectionMyTodo}>
