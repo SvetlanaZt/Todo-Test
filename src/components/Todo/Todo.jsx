@@ -16,7 +16,7 @@ export default function Todo() {
         const savedSettings = localStorage.getItem("settings");
         const parsedSettings = JSON.parse(savedSettings);
     
-        fetchData().then(data => setData([...(parsedSettings || []), ...data.filter(a=>!a.completed), 
+        fetchData().then(data => setData([...parsedSettings || [], ...data.filter(a=>!a.completed), 
             ...data.filter(a=>a.completed)]))
       }, [])
     
