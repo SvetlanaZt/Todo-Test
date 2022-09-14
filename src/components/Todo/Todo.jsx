@@ -9,7 +9,7 @@ import css from './Todo.module.css'
 export default function Todo() {
     const [data, setData] = useState([]);
     const [filter, setFilter] = useState('');
-    const [dataLocal, setDataLocal] = useState([]);
+    const [dataLocal] = useState([]);
     console.log(dataLocal)
 
     useEffect(() => {
@@ -19,15 +19,15 @@ export default function Todo() {
         fetchData().then(data => setData([...parsedSettings || [], ...data.filter(a=>!a.completed), 
             ...data.filter(a=>a.completed)]))
       }, [])
-    
+
       const takeName = (contacts)=> {
-        console.log(contacts)
-        setDataLocal([{id: nanoid(), title: contacts, completed: false },...dataLocal])
-        localStorage.setItem("settings", JSON.stringify([{id: nanoid(), title: contacts, completed: false },...dataLocal]));
         const savedSettings = localStorage.getItem("settings");
-        const parsedSettings = JSON.parse(savedSettings);
-        
-        setData(prevState => [...parsedSettings, ...prevState])
+        const parsedSettings = JSON.parse(savedSettings) || [];
+        const newItem = {id: nanoid(), title: contacts, completed: false };
+        const updatedData = [newItem,...parsedSettings];
+
+        localStorage.setItem("settings", JSON.stringify(updatedData));        
+        setData(prevState => [newItem, ...prevState])
       }
     
   const changeInput = (evt) => { 
@@ -47,6 +47,8 @@ export default function Todo() {
   }
 
   const onChangeInput = data && data.filter(item => item.title.toLowerCase().includes(filter.toLowerCase()));
+  // const tfbfbg = onChangeInput.filter(item => item.completed)
+
 
     return(
  <section className={css.section}>
