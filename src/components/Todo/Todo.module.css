@@ -26,6 +26,7 @@ padding-left: 21px;
 @media (min-width: 1200px) {
     .sectionTodo {
       display: flex;
+      min-width: 500px;
     }
     .sectionTodo{
         margin-right: 20px;

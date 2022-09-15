@@ -8,7 +8,7 @@ const onChange = (e) =>{
     setContacts(e.target.value)
 }
 const addTodo =()=>{
-    onClick(contacts);
+    onClick(contacts.trim());
     reset()
 }
 const reset =()=>{

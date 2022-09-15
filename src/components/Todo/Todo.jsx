@@ -10,8 +10,6 @@ export default function Todo() {
     const [data, setData] = useState([]);
     const [filter, setFilter] = useState('');
     const [filteredToDoes, setFilteredToDoes] = useState([]);
-    const [dataLocal] = useState([]);
-    console.log(dataLocal)
 
     useEffect(() => {
         const savedSettings = localStorage.getItem("settings");
@@ -40,7 +38,7 @@ export default function Todo() {
       }
     
   const changeInput = (evt) => { 
-    setFilter(evt.currentTarget.value)
+    setFilter(evt.currentTarget.value.trim())
   }
 
   const chanheBoole = (task) => {
@@ -54,26 +52,6 @@ export default function Todo() {
     });
     setData(updatedData)
   }
-
-  // const onChangeInput = data && data.filter(item => item.title.toLowerCase().includes(filter.toLowerCase()));
-  
-
-// const onClickFillter = (e)=>{
-// console.log(e)
-// switch (e) {
-//   case 'All':
-//     setData(prevState=> prevState.filter(item => item.title.toLowerCase().includes(filter.toLowerCase())));
-//     break;
-//   case 'Done':
-//     setData(prevState=> prevState.filter(i=>i.completed));
-//     break; 
-//    case 'False':
-//     setData(prevState=> prevState.filter(i=>!i.completed));
-//     break; 
-// default: return;
-// }
-// }
-
     return(
  <section className={css.section}>
     <div className={css.headerTodo}></div>
