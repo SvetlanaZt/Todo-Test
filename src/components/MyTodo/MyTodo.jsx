@@ -54,12 +54,3 @@ export default function MyTodo({value, onTakeBoole}) {
      </div>
     )
 }
-
-
-
-{/* <div>
-<div className={css.myTodoComplited}>
-<p onClick={()=>onClickFillter('All')} className={css.myTodoComplitedItem}>Все /</p>
-<p onClick={()=>onClickFillter('Done')} className={css.myTodoComplitedItem}>Выполнены /</p>
-<p onClick={()=>onClickFillter('False')} className={css.myTodoComplitedItem}>Не выполнены</p>
-</div> */}
