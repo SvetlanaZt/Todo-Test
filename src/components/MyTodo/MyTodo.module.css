@@ -2,6 +2,7 @@
 .item{
     position: relative;
     min-height: 72px;
+    padding-right: 75px;
 
     font-family: 'Roboto';
     font-style: normal;
